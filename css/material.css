@@ -1,0 +1,123 @@
+body {
+  background: #333;
+  color: #aaa;
+  font-family: "Roboto", sans-serif;
+}
+
+body *,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+
+.input-box {
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
+}
+.input-box a {
+  color: #369;
+}
+.input-box p {
+  font-size: 13px;
+}
+.input-box h1 {
+  font-weight: 100;
+}
+.input-box .input {
+  margin: 20px;
+  position: relative;
+  text-align: left;
+}
+.input-box .input input {
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #555;
+}
+.input-box .input .line {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #369;
+  margin: auto;
+  transition: 0.25s ease;
+  position: relative;
+  top: -20px;
+}
+.input-box .input input:focus ~ .line {
+  width: 100%;
+}
+.input-box .input label {
+  position: relative;
+  cursor: text;
+  transition: 0.25s ease;
+  font-size: 15px;
+  left: 1px;
+}
+.input-box .input input:invalid + label {
+  top: -25px;
+}
+.input-box .input input:valid + label {
+  color: #888;
+}
+.input-box .input input:valid + label,
+.input-box .input input:focus + label {
+  top: -38px;
+  font-size: 10px;
+  left: 0;
+}
+.input-box .input input:focus + label {
+  top: -38px;
+  font-size: 10px;
+  color: #369;
+}
+.input-box .signup {
+  background: #369;
+  position: relative;
+  width: 100px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  cursor: pointer;
+  overflow: hidden !important;
+  transition: 0.25s linear;
+}
+.input-box .signup .span {
+  position: relative;
+  z-index: 10 !important;
+}
+.input-box .signup:hover {
+  box-shadow: 0 0 5px #000;
+}
+.input-box .signup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 50vh;
+  height: 50vh;
+  background: #264d73;
+  z-index: 0;
+  transition: none;
+  opacity: 1;
+  border-radius: 50%;
+}
+.input-box .signup:active {
+  box-shadow: 0 0 10px 3px #222;
+}
+.input-box .signup:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  z-index: 0;
+  transition: 1s opacity, 1.3s transform;
+}
