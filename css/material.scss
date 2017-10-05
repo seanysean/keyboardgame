@@ -1,0 +1,126 @@
+$blue: #369;
+
+body {
+  background: #333;
+  color: #aaa;
+  font-family: "Roboto", sans-serif;
+}
+body *,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+//* {
+//  border: 1px solid #aaa;
+//}
+.input-box {
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  text-align: center;
+  a {
+    color: #369;
+  }
+  p {
+    font-size: 13px;
+  }
+  h1{
+  font-weight: 100;
+  }
+  .input {
+    margin: 20px;
+    position: relative;
+    text-align: left;
+    input {
+      width: 100%;
+      border: none;
+      font-size: 15px;
+      background: transparent;
+      color: #fff;
+      outline: none !important;
+      box-shadow: none !important;
+      border-bottom: 1px solid #555;
+    }
+    .line {
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $blue;
+      margin: auto;
+      transition: 0.25s ease;
+      position: relative;
+      top: -20px;
+    }
+    input:focus ~ .line {
+      width: 100%;
+    }
+    label {
+      position: relative;    
+      cursor: text;
+      transition: 0.25s ease;
+      font-size: 15px;
+      left: 1px;
+    }
+    input:invalid + label {
+      top: -25px;
+    }
+    input:valid + label {
+      color: #888;
+    }
+    input:valid + label,
+    input:focus + label {
+      top: -38px;
+      font-size: 10px;
+      left: 0;
+    }
+    input:focus + label {
+      top: -38px;
+      font-size: 10px;
+      color: $blue;
+    }
+  }
+  .signup {
+    background: $blue;
+    position: relative;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden !important;
+    transition: 0.25s linear;
+    .span {
+      position: relative;
+      z-index: 10 !important;
+    }
+    &:hover {
+      box-shadow: 0 0 5px #000;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(0);
+      width: 50vh;
+      height: 50vh;
+      background: darken($blue,10%);
+      z-index: 0;
+      transition: none;
+      opacity: 1;
+      border-radius: 50%;
+    }
+    &:active {
+      box-shadow: 0 0 10px 3px #222;
+    }
+    &:active::before {
+      transform: translate(-50%,-50%) scale(1);
+      opacity: 0;
+      z-index: 0;
+      transition: 1s opacity, 1.3s transform;
+    }
+  }
+}
