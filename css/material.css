@@ -80,10 +80,20 @@ body *::before {
   font-size: 10px;
   color: #369;
 }
+.input-box .error {
+  padding: 10px;
+  background: #BC4242;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 13px;
+  border: 1px solid #963434;
+  border-radius: 5px;
+  display: none;
+}
 .input-box .signup {
   background: #369;
   position: relative;
-  width: 100px;
+  width: 150px;
   margin: 20px auto;
   padding: 10px 20px;
   cursor: pointer;
@@ -119,5 +129,5 @@ body *::before {
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
   z-index: 0;
-  transition: 1s opacity, 1.3s transform;
+  transition: 0.5s opacity, 0.7s transform;
 }
