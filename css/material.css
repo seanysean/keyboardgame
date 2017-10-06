@@ -51,7 +51,7 @@ body *::before {
   margin: auto;
   transition: 0.25s ease;
   position: relative;
-  top: -20px;
+  top: -19px;
 }
 .input-box .input input:focus ~ .line {
   width: 100%;

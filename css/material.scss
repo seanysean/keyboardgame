@@ -52,13 +52,13 @@ body *::before {
       margin: auto;
       transition: 0.25s ease;
       position: relative;
-      top: -20px;
+      top: -19px;
     }
     input:focus ~ .line {
       width: 100%;
     }
     label {
-      position: relative;    
+      position: relative;
       cursor: text;
       transition: 0.25s ease;
       font-size: 15px;

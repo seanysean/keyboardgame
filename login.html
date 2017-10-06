@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="./css/material.css">
   </head>
   <body>
@@ -11,13 +12,16 @@
         <label for="user">Username</label>
         <i class="line"></i>
       </div>
-      <div class="input">   
+      <div class="input">
         <input id="pass" type="password" required>
         <label for="pass">Password</label>
         <i class="line"></i>
       </div>
-      <div class="signup"><span>Sign Up</span></div>
+      <div id="login" class="signup"><span>Log in</span></div>
       <p>Don't have a account? <a href="signup.html">Sign Up</a>.</p>
+      <script src="./js/global.js"></script>
+      <script src="./js/checklogin.js"></script>
+      <script src="./js/login.js"></script>
     </div>
   </body>
 </html>
