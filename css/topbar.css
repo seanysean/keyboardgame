@@ -23,6 +23,12 @@ html {
 }
 .username {
   float: right;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.username:hover {
+  opacity: 0.9;
 }
 #menu {
   position: fixed;
@@ -50,7 +56,7 @@ html {
   transition: 0.25s color ease;
 }
 #menubtn:hover, #menubtn2:hover {
-  color: #ccc;
+  color: #ddd;
 }
 #menu a {
   display: block;

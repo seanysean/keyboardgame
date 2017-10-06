@@ -11,7 +11,7 @@ loginEL.addEventListener("click", function() {
   for (i in checkLogin) {
     if (JSON.stringify(checkLogin[i]) === JSON.stringify(tempo["input"])) {
       sessionStorage.setItem("loggedin",true);
-      sessionStorage.setItem("username",checkLogin[i]);
+      sessionStorage.setItem("username",checkLogin[i][0]);
       window.location = "home.html";
       break;
     }
